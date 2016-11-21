@@ -1,0 +1,42 @@
+<ion-view id="findvehicle">
+    <ion-header-bar class="heade">
+        <button class="button " ui-sref="home"><img src="images/fanhui_ico.png"></button>
+        <div class="title item-input-inset" style="left: 27px ;">
+            <div class="item-input-wrapper search-br" >
+                <i class="icon ion-search placeholder-icon input-ico" ></i>
+                <input type="search" style="color: #fff;" placeholder="请输入搜索关键字">
+            </div>
+        </div>
+        <button class="button yuying"><img src="images/findvehicle/yuying_ico.png"></button>
+    </ion-header-bar>
+    <ion-content class="has-header "  overflow-scroll="true" style="overflow: hidden" >
+        <div class="bg"><img src="images/findvehicle/ditu_bg.jpg"></div>
+    </ion-content>
+    <div class="list yuyue"  ng-class={'butn':aa}>
+        <div class="title"><span><img id="title-btn" src="images/findvehicle/qiche_ico.png"></span>可预约的停车场<button ng-click="caidan(aa)"><img src="images/findvehicle/caidan_xia_ico.png"></button></div>
+        <ion-scroll class="cont" direction="y">
+            <div class="item">
+                <div class="left">
+                    <h2>天府国际停车场</h2>
+                    <p>可预约泊位数：13个 距离：12公里</p>
+                </div>
+                <div class="right"><a>预约</a></div>
+            </div>
+            <div class="item">
+                <div class="left">
+                    <h2>天府国际停车场</h2>
+                    <p>可预约泊位数：13个 距离：12公里</p>
+                </div>
+                <div class="right"><a>预约</a></div>
+            </div>
+            <div class="item">
+                <div class="left">
+                    <h2>天府国际停车场</h2>
+                    <p>可预约泊位数：13个 距离：12公里</p>
+                </div>
+                <div class="right"><a>预约</a></div>
+            </div>
+        </ion-scroll>
+
+    </div>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view id="install">
+    <ion-header-bar class="heade">
+        <button class="button " ui-sref="home"><img src="images/fanhui_ico.png"></button>
+        <h2 class="title">更多设置</h2>
+    </ion-header-bar>
+    <ion-content class="cont1" overflow-scroll="true" style="overflow: hidden" >
+        <div class="list">
+            <div ng-click="" class="item item-icon-right"><i class="icon ion-ios-arrow-right"></i>停车场收藏</div>
+            <div ng-click="" class="item item-icon-right"><i class="icon ion-ios-arrow-right"></i>停车场离线地图</div>
+            <div ng-click="" class="item item-icon-right"><i class="icon ion-ios-arrow-right"></i>地图导航选择</div>
+        </div>
+        <div class="list" style="height: 105px;">
+            <div ng-click="" class="item item-icon-right"><i class="icon ion-ios-arrow-right"></i>清除缓存</div>
+            <div  class="item item-toggle"><label class=" toggle toggle-balanced">
+                <input type="checkbox">
+                <div class="track"><div class="handle"></div></div>
+            </label>Wi-Fi下自动下载更新离线地图</div>
+        </div>
+        <div class="list">
+            <div ng-click="" class="item item-icon-right"><i class="icon ion-ios-arrow-right"></i>常见问题</div>
+            <div ng-click="" class="item item-icon-right"><i class="icon ion-ios-arrow-right"></i>关于我们</div>
+            <div ng-click="" class="item item-icon-right"><i class="icon ion-ios-arrow-right"></i>当前版本</div>
+        </div>
+        <div class="denglu">
+            <a ng-show="login" ng-click="tuichu()" ui-sref="home" class="btn">
+                退出登录
+                <div style="width: 750px;height: 159px;"></div>
+            </a>
+            <a ng-show="!login" ui-sref="register" class="btn">
+                立即登陆
+                <div style="width: 750px;height: 159px;"></div>
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>

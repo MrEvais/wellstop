@@ -1,0 +1,57 @@
+<ion-view id="meofroll">
+    <ion-header-bar class="heade">
+        <button class="button " ui-sref="home"><img src="images/fanhui_ico.png"></button>
+        <h2 class="title">我的停车券</h2>
+    </ion-header-bar>
+    <ion-content  class="cont">
+        <div ng-show="login" class="list">
+            <div class="item" ng-repeat="parizes in arr.geren.prize | orderBy:'parizes.time.start'">
+                <div ng-show="parizes.money==5">
+                    <div class="bg">
+                        <img ng-show="!parizes.state && parizes.pastdue==false" src="images/meofroll/juan_05_bg_wei.png">
+                        <img ng-hide="!parizes.state && parizes.pastdue==false" src="images/meofroll/juan_05_bg_yiyong.png">
+                    </div>
+                    <div class="neirong">
+                        <div class="bt">停车场抵用券</div>
+                        <div class="shiyong">
+                            <img ng-show="!parizes.state && parizes.pastdue==false" src="images/meofroll/daishiyong_ico.png">
+                            <img ng-show="parizes.pastdue==true && parizes.state==false" src="images/meofroll/yiguoqi_ico.png">
+                        </div>
+                        <div class="zhuangtai">
+                            <div ng-show="!parizes.state && parizes.pastdue==false">待使用</div>
+                            <div ng-show="parizes.state==true && parizes.pastdue==false">已使用</div>
+                            <div ng-show="parizes.pastdue==true && parizes.state==false">已过期</div>
+                        </div>
+                        <div class="shijian">
+                            <div>开始时间 {{parizes.time.start}}</div>
+                            <div>结束时间 {{parizes.time.finish}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-show="parizes.money==10">
+                    <div class="bg">
+                        <img ng-show="!parizes.state && parizes.pastdue==false" src="images/meofroll/juan_10_bg_wei.png">
+                        <img ng-hide="!parizes.state && parizes.pastdue==false" src="images/meofroll/juan_10_bg_yiyong.png">
+                    </div>
+                    <div class="neirong">
+                        <div class="bt">停车场抵用券</div>
+                        <div class="shiyong">
+                            <img ng-show="!parizes.state && parizes.pastdue==false" src="images/meofroll/daishiyong_ico.png">
+                            <img ng-show="parizes.pastdue==true && parizes.state==false" src="images/meofroll/yiguoqi_ico.png">
+                        </div>
+                        <div class="zhuangtai">
+                            <div ng-show="!parizes.state && parizes.pastdue==false">待使用</div>
+                            <div ng-show="parizes.state==true && parizes.pastdue==false">已使用</div>
+                            <div ng-show="parizes.pastdue==true && parizes.state==false">已过期</div>
+                        </div>
+                        <div class="shijian">
+                            <div>开始时间 {{parizes.time.start}}</div>
+                            <div>结束时间 {{parizes.time.finish}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img ng-hide="login" src="images/meofroll/kong.jpg" style="margin-top: -2%;">
+    </ion-content>
+</ion-view>

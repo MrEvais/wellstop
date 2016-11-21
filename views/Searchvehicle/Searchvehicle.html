@@ -1,0 +1,27 @@
+<ion-view id="Searchvehicle">
+    <ion-header-bar class="heade">
+        <button class="button " ui-sref="home"><img src="images/fanhui_ico.png"></button>
+        <h2 class="title">场内找车</h2>
+        <button class="button " ng-hide="true">清除照片</button>
+    </ion-header-bar>
+
+    <div class="tab">
+    <ion-nav-view name="Searchvehicle">
+    </ion-nav-view>
+    </div>
+
+    <div class="tabs tabs-icon-top">
+        <a class="tab-item" ui-sref="Searchvehicle.sweep">
+            <i class="icon ion-android-expand"></i>
+            扫码找车
+        </a>
+        <a class="tab-item" ui-sref="Searchvehicle.photograph">
+            <i class="icon ion-ios-camera"></i>
+            拍照找车
+        </a>
+        <a class="tab-item" ui-sref="Searchvehicle.platenumber">
+            <i class="icon ion-model-s"></i>
+            车位号找车
+        </a>
+    </div>
+</ion-view>

@@ -1,0 +1,69 @@
+<ion-view id="register">
+    <ion-content class="cont" overflow-scroll="true" style="overflow: hidden" >
+        <img class="bg" src="images/register/bg.jpg">
+        <div class="logo" ui-sref="home"><img src="images/register/log_ico.png"></div>
+        <div class="login">
+            <div class="title_top">
+                <img src="images/register/title_bg.png">
+            </div>
+            <form>
+                <div class="cont">
+                    <div>
+                        <div class="row" style="border: none;">
+                            <div class="col" ng-class={"col-show":aa} ng-click="aa=!aa"><a>登陆</a></div>
+                            <div class="col" ng-class={"col-show":!aa} ng-click="aa=!aa"><a>注册</a></div>
+                        </div>
+
+                        <div ng-show="!aa">
+                            <div class="lgoin">
+                                <div class="item-input" >
+                                    <i class="icon" ><img src="images/register/shouji_ico.png"></i>
+                                    <input ng-focus="" type="text" placeholder="请输入手机号">
+                                </div>
+                                <div class="item-input" >
+                                    <i class="icon" ><img src="images/register/suo_ico.png"></i>
+                                    <input type="password" placeholder="请输入密码">
+                                </div>
+                                <div class="forget" ng-show="!aa">
+                                    <a>忘记密码？</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-show="aa">
+                            <div class="lgoin">
+                                <div class="item-input" >
+                                    <i class="icon" ><img src="images/register/shouji_ico.png"></i>
+                                    <input type="text" placeholder="请输入手机号">
+                                </div>
+                                <div class="item-input" >
+                                    <i class="icon" ><img src="images/register/suo_ico.png"></i>
+                                    <input type="password" placeholder="请输入密码">
+                                </div>
+                                <div class="item-input verify-div">
+                                    <input class="verify" type="text" placeholder="请输入验证码">
+                                </div>
+                                <button class="verify-btn" type="button" ng-click="">发送验证码</button>
+                                <div class="forget">
+                                    <a>忘记密码？</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="sub-btn" >
+                    <button type="submit" ng-show="!aa" ui-sref="home" ng-click="denglu()">立即登陆</button>
+                    <button type="submit" ng-show="aa" ui-sref="home" ng-click="">立即注册</button>
+                </div>
+            </form>
+        </div>
+        <div class="besides" ng-show="!aa">
+            <div class="row ico">
+                <div class="col"><img src="images/register/qq_ico.png"></div>
+                <div class="col"><img src="images/register/weixin_ico.png"></div>
+                <div class="col"><img src="images/register/weibo_ico.png"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,56 @@
+{
+  "geren": {
+    "username": "Moriz",
+    "account": 123456,
+    "password": 123456,
+    "signin": 10,
+    "news": 5,
+    "prize": [
+      {
+        "money": 5,
+        "state": false,
+        "pastdue":false,
+        "time": {
+          "start": "2016-08-06 12:12:05",
+          "finish": "2016-12-06 00:00:00"
+        }
+      },
+      {
+        "money": 10,
+        "state": false,
+        "pastdue":false,
+        "time": {
+          "start": "2016-07-06 12:12:05",
+          "finish": "2016-11-06 00:00:00"
+        }
+      },
+      {
+        "money": 10,
+        "state": true,
+        "pastdue":false,
+        "time": {
+          "start": "2016-04-06 12:12:05",
+          "finish": "2016-08-06 00:00:00"
+        }
+      },
+      {
+        "money": 5,
+        "state": false,
+        "pastdue":true,
+        "time": {
+          "start": "2016-03-06 12:12:05",
+          "finish": "2016-08-06 00:00:00"
+        }
+      },
+      {
+        "money": 5,
+        "state": true,
+        "pastdue":false,
+        "time": {
+          "start": "2016-05-16 12:12:05",
+          "finish": "2016-08-06 00:00:00"
+        }
+      }
+    ]
+  }
+}

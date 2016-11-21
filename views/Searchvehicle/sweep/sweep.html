@@ -1,0 +1,17 @@
+    <ion-view id="sweeppay">
+        <ion-header-bar class="heade">
+            <button class="button " ui-sref="home"><img src="images/fanhui_ico.png"></button>
+            <div class="title">扫码付款</div>
+            <button class="button chepai">车牌付款</button>
+        </ion-header-bar>
+        <ion-content class="cont">
+            <img class="bg" src="images/sweeppay/bg.jpg">
+            <div class="deng" ng-click="aa=!aa">
+                <div><img ng-show="aa" src="images/sweeppay/deng_kai_ico.png"><img ng-hide="aa" src="images/sweeppay/deng_guan_ico.png"></div>
+                <div class="text">
+                    <p ng-show="aa">开灯</p>
+                    <p ng-hide="aa" >关灯</p>
+                </div>
+            </div>
+        </ion-content>
+    </ion-view>

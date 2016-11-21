@@ -1,0 +1,62 @@
+<ion-view id="signin">
+    <ion-header-bar class="heade">
+        <button class="button " ui-sref="home"><img src="images/fanhui_ico.png"></button>
+        <h2 class="title">签到历程</h2>
+    </ion-header-bar>
+    <ion-content class="cont"   overflow-scroll="true" style="overflow: hidden" >
+        <div class="top">
+            <h2>连续签到<b ng-class="{'b':tianshu>50}">{{tianshu}}</b>天啦~</h2>
+            <img src="images/signin/bg_shang.png">
+        </div>
+        <div class="course">
+                <img src="images/signin/licheng_bg.png">
+            <div class="tianshu" style="right:{{tianshuright}}%;">
+                <img src="images/signin/tianshu_ico.png">
+                <span ng-show="tianshu<=99">{{tianshu}}</span>
+                <span ng-show="tianshu>99">99+</span>
+            </div>
+            <div class="jindu" style="right:{{jinduright}}%"></div>
+            <div class="tian">
+                <span><img src="images/signin/tianshu_kuang.png"><p>10</p></span>
+                <span><img src="images/signin/tianshu_kuang.png"><p>40</p></span>
+                <a class="jp jp1" style="z-index: 10;">
+                    <img ng-show="tianshu<20  || jp11==false" src="images/signin/jiangli_ico_wei.png">
+                    <img ng-show="tianshu>=20 && jp11" src="images/signin/jiangli_ico.png">
+                    <span  ng-show="jp11"  ng-click="jp1()">
+                        <div ng-show="tianshu>=20" class="img-lin" ng-click="jp1()"></div>
+                        <p ng-show="tianshu>=20 "  ng-click="openModal(5)">立即领取</p>
+                    </span>
+                </a>
+                <a class="jp jp2" style="left: 53%;">
+                    <img ng-show="tianshu<30 || jp22==false" src="images/signin/jiangli_ico_wei.png">
+                    <img  ng-show="tianshu>=30 && jp22" src="images/signin/jiangli_ico.png">
+                    <span  ng-show="jp22"  ng-click="jp2()">
+                        <div ng-show="tianshu>=30" class="img-lin"></div>
+                        <p ng-show="tianshu>=30" ng-click="openModal(10)">立即领取</p>
+                    </span>
+                </a>
+                </div>
+            </div>
+        </div>
+        <button ng-click="ts()" style="position: absolute; width:20%;height: 4%;border-radius: 5px; border: 1px solid #7bc7f9; background: #fff;color:#7bc7f9;left:50%;top: 38%;transform: translate(-50%,-50%);z-index: 10">签到</button>
+        <div class="rule">
+            <h2>活动规则：</h2>
+            <p>1、每天登陆好停签到可以增加一点签到历程。</p>
+            <p>2、连续签到满20天、40天、60天可以获得5元、10元、20元停车抵用券。</p>
+            <p>3、中途忘记登陆签到，额连续天数重新计算；如果想恢复连续登陆天数，请咨询好停官网（www.haoting.com)。</p>
+            <p>4、本规则最终解释权由好停有限公司所有。</p>
+        </div>
+        <script id="signinprize.html" type="text/ng-template">
+            <ion-modal-view id="signinprize">
+                <ion-content class="tan">
+                    <img src="images/signinprize/bg.png">
+                    <div class="gb" ng-click="closeModal()"><img src="images/signinprize/gb_ico.png"></div>
+                    <div class="roll">
+                        <img src="images/signinprize/roll_5.png">
+                    </div>
+                    <div class="chakan"><h2>优惠券请到<a ui-sref="meofroll" ng-click="closeModal()">我的优惠卷</a>查看</h2></div>
+                </ion-content>
+            </ion-modal-view>
+        </script>
+    </ion-content>
+</ion-view>

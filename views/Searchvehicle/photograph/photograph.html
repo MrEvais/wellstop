@@ -1,0 +1,18 @@
+<ion-view id="photograph">
+    <ion-content class="cton"overflow-scroll="true" style="overflow: hidden"">
+    <div class="pai">
+        <div ng-show="true" class="bt"><h2>拍照记录爱车的位置，方便寻找您的爱车</h2></div>
+        <div ng-show="true" class="btn" ng-click="paizhaos()">
+            <!--<div style="width: 250px; height: 250px;"></div>-->
+        </div>
+    </div>
+    <img ng-hide="paizhao" style="position: absolute" src="images/Searchvehicle/paizhao_che_bg.jpg">
+    <div ng-hide="paizhao" class="xinxi">
+        <div class="xinxi_bt">
+            <p>成都环球中心地下停车场</p>
+            <p>2016-06-15 16:50</p>
+        </div>
+        <a class="xinxi_btn" ng-click="paizhaosfhui()"><div style="width: 80px;height: 60px;"></div></a>
+    </div>
+    </ion-content>
+</ion-view>

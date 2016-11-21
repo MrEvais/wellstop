@@ -1,0 +1,112 @@
+
+
+<ion-side-menus>
+    <!--主内容区-->
+    <ion-side-menu-content>
+        <ion-nav-view id="home">
+            <img src="images/home/home_bg.jpg" style="width: 100%; position: absolute;top:-3%">
+            <img src="images/home/bg_ico.png" style="width: 75%;position: absolute;bottom: 0.2%;left: 12%">
+            <ion-header-bar class="heade">
+                <a class="button me-ico" menu-toggle><img src="images/home/me_ico.png"></a>
+                <h2 class="title">HAOTING</h2>
+                <a class="button qipao-ico"><img src="images/home/qipao_ico.png"></a>
+            </ion-header-bar>
+            <ion-content>
+                <div class="weather">
+                    <div class="row">
+                        <div class="col left">
+                            <div class="top"><h2><span><img src="images/home/diwei_ico.png"></span>成都市</h2></div>
+                            <div class="mid"><h2>23<span>
+            <img src="images/home/wendu_ico.png">
+            </span></h2></div>
+                            <div class="bot">
+                                <span><img src="images/home/tianqi/qingtian_ico.png"></span>
+                                <div class="right">
+                                    <h3>晴天</h3>
+                                    <p>PM2.5 58良</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col right">
+                            <div class="top">
+                                <h2>今日限行尾号：</h2>
+                            </div>
+                            <div class="mid">
+                                <a>1</a>
+                                <a>2</a>
+                            </div>
+                            <div class="bot">
+                                <p>限行时段07:30~20:00<br> 禁止在二、三环区域之间行驶</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="qiandao" ng-show="qiandao" ng-click="ts()" >
+                    <span><img src="images/home/qiandao_bg.png"></span>
+                </div>
+                <div class="qiandao" ng-hide="qiandao" ng-click="ts()" ui-sref="signin">
+                    <span><img src="images/home/qiandao_bg.png"></span>
+                </div>
+                <div class="list ">
+                    <div class="item " ng-click="" ui-sref="findvehicle"><span><img
+                            src="images/home/yuyue_ico.png"></span>预约停车
+                    </div>
+                    <div class="item " ng-click="" ><span><img
+                            src="images/home/mianfei_ico.png"></span>免费停车
+                    </div>
+                    <div class="item " ng-click="" ui-sref="Searchvehicle.photograph"><span><img
+                            src="images/home/chazhao_ico.png"></span>场内找车
+                    </div>
+                    <div class="item " ng-click="" ui-sref="sweeppay"><span><img
+                            src="images/home/shaoma_ico.png"></span>扫码付款
+                    </div>
+                </div>
+            </ion-content>
+        </ion-nav-view>
+    </ion-side-menu-content>
+
+    <!--左滑菜单-->
+    <ion-side-menu side="left" id="install">
+        <ion-content class="cont">
+            <div class="zhuangtai" ui-sref="register" >
+                <div class="touxiang">
+                    <img ng-show="login" src="images/install/touxiang_log.png" >
+                    <img ng-hide="login" src="images/install/weidenglu_ico.png" >
+                </div>
+                <div class="mingzi" >
+                    <div class="yidenglu" ng-show="login">
+                        <h3>Moria</h3>
+                        <div class="bianji"><div class="ico"><img src="images/install/bi_ico.png"></div>账号管理</div>
+                    </div>
+
+                    <div ng-hide="login">
+                        <h2>登陆/注册</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list">
+                <a class="item item-icon-left"  menu-close ng-click="alert('此页面未制作')">
+                    <i class="icon"><img src="images/install/qianbao_ico.png"></i>我的钱包
+                </a>
+                <a class="item item-icon-left" ui-sref="signin" menu-close>
+                    <i class="icon"><img src="images/install/rli_ico.png"></i>签到历程<span ng-show="login">活跃：{{tianshu}}天</span>
+                </a>
+                <a class="item item-icon-left" ui-sref="meofroll" menu-close>
+                    <i class="icon"><img src="images/install/rmb_ico.png"></i>我的停车券
+                </a>
+                <a class="item item-icon-left"  menu-close ng-click="alert('此页面未制作')">
+                    <i class="icon"><img src="images/install/chuzhu_ico.png"></i>我的车辆
+                </a>
+                <a class="item item-icon-left"  menu-close ng-click="alert('此页面未制作')">
+                    <i class="icon"><img src="images/install/xiaoxi_ico.png"></i>消息中心<b ng-show="login" class=" badge badge-assertive">{{arr.geren.news}}</b>
+                </a>
+                <a class="item item-icon-left" menu-close ng-click="alert('此页面未制作')">
+                    <i class="icon"><img src="images/install/tongji_ico.png"></i>停车记录
+                </a>
+            </div>
+            <div class="shezhi" ui-sref="install"><div><img src="images/install/shezhi_ico.png"></div>更多设置</div>
+        </ion-content>
+    </ion-side-menu>
+
+</ion-side-menus>
